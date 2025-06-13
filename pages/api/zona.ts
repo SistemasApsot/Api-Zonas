@@ -13,7 +13,7 @@ const fileData = fs.readFileSync(filePath, 'utf-8')
 fileData.split('\n').forEach(line => {
   const trimmed = line.trim()
   if (!trimmed) return
-  const [idLocalidadStr, idZonaStr, nombreZona] = trimmed.split(',')
+  const [idLocalidadStr, nombreLocalidad, idProvincia, nombre_Normalizado, idZonaStr, nombreZona, ] = trimmed.split(',')
   const idLocalidad = parseInt(idLocalidadStr)
   const idZona = parseInt(idZonaStr)
   if (!isNaN(idLocalidad) && !isNaN(idZona) && nombreZona) {
